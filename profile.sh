@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#pull filesystem + mysql db backups
-
 remote_dirs="" #remote ftp/ftp dir to backup
 remote_user="" #remote  ftp username
 remote_server="" #remote ftp hostname
