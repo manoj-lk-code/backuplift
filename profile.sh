@@ -22,24 +22,24 @@ echo "Finished creating date directory"
 
 #Create database dump file or backup file.
 
-mysqldump --no-tablespaces -u $wpmysqluser -p$wpmysqluserpass $wpmysqldb > $backup_target/$date/$date.sql
+mysqldump --no-tablespaces -u $wpmysqluser -p$wpmysqluserpass $wpmysqldb > $backup_target/$wpdomain/$date/$date.sql
 
 #Creating directory zip file with date.
 
 echo "Compressing your directory"
-zip -r $backup_target/$date/$date.zip $target_dir
+zip -r $backup_target/$wpdomain/$date/$date.zip $target_dir
 echo "compressed the directory is finished"
 
 #transferring compressed date directory via rsync
 
 echo
 echo "starting rsync backup..."
-rsync --progress -e 'ssh -p23' --recursive $backup_target/$date $remote_user@$remote_server:$remote_dirs
+rsync --progress -e 'ssh -p23' --recursive $backup_target/$wpdomain/$date $remote_user@$remote_server:$remote_dirs
 echo "done. Finished sending backup date directory to remote location"
 
 #delete backup folder after transfering to remote location.
 
 echo "deleting your backup date folder & sql file"
-rm -r $backup_target/$date
+rm -r $backup_target/$wpdomain/$date
 echo "finished deleting the backup"
 
