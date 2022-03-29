@@ -3,11 +3,11 @@
 #pull filesystem + mysql db backups
 
 remote_dirs="" #remote ftp/ftp dir to backup
-remote_user="u296992" #remote  ftp username
-remote_server="u296992.your-storagebox.de" #remote ftp hostname
+remote_user="" #remote  ftp username
+remote_server="" #remote ftp hostname
 ssh_options="-i /root/.ssh/id_rsa" #sshkey location
-target_dir="/home/paidboom_user/paidboom/public_html" #backup directory location that you'd like to backup
-backup_target="/manojbackups" #backup where to
+target_dir="" #backup directory location that you'd like to backup
+backup_target="" #backup where to
 date=$(date +"%d-%b-%Y")
 wpdomain="domain" #wp domain name without any space
 wpmysqluser="" #wordpress database username
@@ -17,7 +17,7 @@ wpmysqluserpass="" #wordpress database user password
 # create backup folder if not exist
 
 echo "Creating backup date directory"
-mkdir -p /manojbackups/$wpdomain/$date
+mkdir -p /$backup_target/$wpdomain/$date
 echo "Finished creating date directory"
 
 #Create database dump file or backup file.
