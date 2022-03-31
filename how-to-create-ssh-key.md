@@ -18,7 +18,7 @@ cat .ssh/id_rsa_manoj_hetzner_backups.pub >> .ssh/storagebox_authorized_keys
 
 cat .ssh/id_rsa_manoj_hetzner_backups_rfc.pub >> .ssh/storagebox_authorized_keys
 
-# copy storagebox_authorized_keys content to storagebox .ssh/authorized_keys
+copy storagebox_authorized_keys content to storagebox .ssh/authorized_keys
 
 # thatsall, test connection using the following
 
