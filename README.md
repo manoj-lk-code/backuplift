@@ -16,6 +16,7 @@ Important notes:
 - By default, profile.sh will send site files without compressing them.
 - If you like to send files compressing them, use `profile-compressed-backup.sh` instead.
 - Make sure to test run once the setup is done.
+- You must have rsync installed in your linux server. Test it by typing `rsync` in your terminal. If you see manual, it would mean rsync is installed already. If not, you'll have to install it.
 
 ------------
 
