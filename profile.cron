@@ -1,1 +1,0 @@
-0 0 * * *  /wp-backup-profile/./profile.sh > /wp-backup-profile/profile.txt 
