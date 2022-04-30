@@ -35,7 +35,9 @@ Important notes:
 
 - or you can type the following command to do it. [This will create folder & download the profile.sh file]
 
-`mkdir backuplift ; wget https://raw.githubusercontent.com/manoj-wpzonify/backuplift/main/profile.sh -P backuplift`
+```html
+mkdir backuplift && wget https://raw.githubusercontent.com/manoj-wpzonify/backuplift/main/profile.sh -P backuplift
+```
 
 - *it would be good idea to do this in the `/home` directory. of course you can do it anywhere you want.*
 
@@ -43,14 +45,18 @@ Important notes:
 
 - Open the profile.sh file
 
-`nano profile.sh`
+```html
+nano profile.sh
+```
 
 - And modify the following with your storagebox details
 
-` remote_dirs=""   -------------> remote directory location.`
-`remote_user=""   -------------> hetzner storagebox username.`
-`remote_server=""-------------> hetzner storagebox hostname.`
-`target_dir=""       -------------> Your website directory path.`
+```html
+remote_dirs=""    -------------> remote directory location.
+remote_user=""   -------------> hetzner storagebox username.
+remote_server=""-------------> hetzner storagebox hostname.
+target_dir=""       -------------> Your website directory path.
+```
 
 - Save the changes & close the editor.
 
@@ -58,10 +64,12 @@ Important notes:
 
 - You can find the example cronjob below. This runs midnight, you can customize the way you want.
 
-`0 0 * * *  bash /backuplift/profile.sh`
+```html
+0 0 * * *  bash /backuplift/profile.sh
+```
 
 ------------
 
 
 
-# That's all, Your backups now will run every day & stored in your storagebox.
+# That's all, Your backups now will run every day & stored in your hetzner.
