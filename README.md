@@ -15,6 +15,7 @@ Create multiple profile.sh files to backup multipe wordpress sites.
 Important notes:
 - By default, profile.sh will send site files without compressing them.
 - If you like to send files compressing them, use `profile-compressed-backup.sh` instead.
+- Make sure to test run once the setup is done.
 
 ------------
 
