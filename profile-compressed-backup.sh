@@ -3,16 +3,16 @@
 
 # START EDITING..
 
-remote_dirs="wpzonify" 
-remote_user="u296992"
-remote_server="u296992.your-storagebox.de"
-target_dir="/home/runcloud/webapps/app-wpzonify"
+remote_dirs="" 
+remote_user=""
+remote_server=""
+target_dir=""
 
 # STOP EDITING..!
 
 
 date=$(date +"%d-%b-%Y")
-ssh_key_loc="/root/.ssh/id_rsa_manoj_hetzner_backups"
+ssh_key_loc="/root/.ssh/id_rsa_wp_backup_profile_hetzner_backups"
 random_file_name=$(echo $RANDOM | md5sum | head -c 20; echo;)
 wpmysqluser=$(grep -w "DB_NAME" $target_dir/wp-config.php | cut --delimiter="'"  --fields="4")
 wpmysqldb=$(grep -w "DB_USER" $target_dir/wp-config.php | cut --delimiter="'"  --fields="4")
