@@ -58,7 +58,7 @@ Important notes:
 
 - You can find the example cronjob below. This runs midnight, you can customize the way you want.
 
-`0 0 * * *  bash /backuplift/profile.sh > /backuplift/profile_log `
+`0 0 * * *  bash /backuplift/profile.sh
 
 ------------
 
