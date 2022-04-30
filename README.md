@@ -58,10 +58,10 @@ Important notes:
 
 - You can find the example cronjob below. This runs midnight, you can customize the way you want.
 
-`0 0 * * *  bash /backuplift/profile.sh
+`0 0 * * *  bash /backuplift/profile.sh`
 
 ------------
 
 
 
-# That's all, Your backups now will run every day & stored in your hetzner.
+# That's all, Your backups now will run every day & stored in your storagebox.
