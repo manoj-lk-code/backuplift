@@ -1,4 +1,4 @@
-**Generating new ssh key**
+**To generate new ssh key, type the following in your server ssh terminal**
 
 `ssh-keygen`
 
