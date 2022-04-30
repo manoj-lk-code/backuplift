@@ -1,29 +1,22 @@
 #!/bin/bash
 
 
-
-
 # START EDITING..
 
-remote_dirs="" #remote dirs to backup
+remote_dirs="" 
 remote_user=""
 remote_server=""
-ssh_key_loc="/root/.ssh/id_rsa"
 target_dir=""
-date=$(date +"%d-%b-%Y")
-wpmysqluser=""
-wpmysqldb=""
-wpmysqluserpass=""
 
 # STOP EDITING..!
 
 
 
-
-
-
-
-
+ssh_key_loc="/root/.ssh/id_rsa"
+date=$(date +"%d-%b-%Y")
+wpmysqluser=$(grep -w "DB_NAME" $target_dir/wp-config.php | cut --delimiter="'"  --fields="4")
+wpmysqldb=$(grep -w "DB_USER" $target_dir/wp-config.php | cut --delimiter="'"  --fields="4")
+wpmysqluserpass=$(grep -w "DB_PASSWORD" $target_dir/wp-config.php | cut --delimiter="'"  --fields="4")
 
 
 #Create database dump file or backup file.
