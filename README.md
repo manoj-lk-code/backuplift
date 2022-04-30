@@ -25,7 +25,7 @@ I have written down step by step way to create & authenticate your storagebox to
 
 or you can type the following command to do it. [This will create folder & download the profile.sh file]
 
-`mkdir backuplift && wget https://github.com/manoj-wpzonify/backuplift/blob/main/profile.sh -P backuplift`
+`mkdir backuplift && wget https://raw.githubusercontent.com/manoj-wpzonify/backuplift/main/profile.sh -P backuplift`
 
 **it would be good idea to do this in the `/home` directory. of course you can do it anywhere you want.*
 
