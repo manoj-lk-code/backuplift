@@ -28,15 +28,16 @@ Important notes:
 ### **STEP 2. download profile.sh file & upload to your server**
 
 - Create folder, name it backuplift.
-- Then download the profile.sh & upload to backuplift folder
+- Then download the profile.sh & upload to backuplift folder.
+- make profile.sh executable file.
 
 ------------
 
 
-- or you can type the following command to do it. [This will create folder & download the profile.sh file]
+- or you can type the following command to do it. [This will create folder,  download the profile.sh file & make the file executable]
 
 ```html
-mkdir backuplift && wget https://raw.githubusercontent.com/manoj-wpzonify/backuplift/main/profile.sh -P backuplift
+mkdir backuplift && wget https://raw.githubusercontent.com/manoj-wpzonify/backuplift/main/profile.sh -P backuplift && chmod +x backuplift/profile.sh
 ```
 
 - *it would be good idea to do this in the `/home` directory. of course you can do it anywhere you want.*
