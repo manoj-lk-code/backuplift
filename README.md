@@ -38,9 +38,9 @@ or you can type the following command to do it. [This will create folder & downl
 - And modify the following with your storagebox details
 
 > remote_dirs=""  -------------> remote directory location. 
-remote_user=""    -------------> hetzner storagebox username
-remote_server="" -------------> hetzner storagebox hostname
-target_dir=""        -------------> Your website directory path.
+> remote_user=""  -------------> hetzner storagebox username
+> remote_server=" -------------> hetzner storagebox hostname
+> target_dir=""   -------------> Your website directory path.
 
 - Save the changes & close the editor.
 
