@@ -1,25 +1,35 @@
-# Generating new ssh key
+**Generating new ssh key**
 
-ssh-keygen
+`ssh-keygen`
 
-# The above command will prompt to ask for location. type the following including dot
+**The above command will prompt to ask for location. type the following including dot**
 
-.ssh/id_rsa_wp_backup_profile_hetzner_backups
+`.ssh/id_rsa_wp_backup_profile_hetzner_backups`
 
-# Converting your key to RFC4716 format - must for sftp
+**Converting your key to RFC4716 format - must for sftp**
 
-ssh-keygen -e -f .ssh/id_rsa_wp_backup_profile_hetzner_backups.pub | grep -v "Comment:" > .ssh/id_rsa_wp_backup_profile_hetzner_backups_rfc.pub
+`ssh-keygen -e -f .ssh/id_rsa_wp_backup_profile_hetzner_backups.pub | grep -v "Comment:" > .ssh/id_rsa_wp_backup_profile_hetzner_backups_rfc.pub`
 
-# Creating authorized_keys file
+**Creating authorized_keys file**
 
-cat .ssh/id_rsa_wp_backup_profile_hetzner_backups.pub >> .ssh/storagebox_authorized_keys
+`cat .ssh/id_rsa_wp_backup_profile_hetzner_backups.pub >> .ssh/storagebox_authorized_keys`
 
-# For SFTP - must
+**For SFTP - must**
 
-cat .ssh/id_rsa_wp_backup_profile_hetzner_backups_rfc.pub >> .ssh/storagebox_authorized_keys
+`cat .ssh/id_rsa_wp_backup_profile_hetzner_backups_rfc.pub >> .ssh/storagebox_authorized_keys`
 
-copy storagebox_authorized_keys content to storagebox .ssh/authorized_keys
+**copy storagebox_authorized_keys content to storagebox .ssh/authorized_keys**
 
-# thatsall, test connection using the following
+`cat .ssh/storagebox_authorized_keys`
 
-sftp -i .ssh/id_rsa_wp_backup_profile_hetzner_backups username@username.your-storagebox.de
+Now copy the content displayed, note down somewhere else.
+
+**Create ssh folder in storagebox**
+
+- Create `.ssh` folder in the root directory and create file called `authorized_keys` inside .ssh folder
+
+- Paste the copied content inside authorized_keys with your favorite editor. 
+
+***Thats all, test connection using the following command in your server ssh terminal***
+
+`sftp -i .ssh/id_rsa_wp_backup_profile_hetzner_backups username@username.your-storagebox.de`
