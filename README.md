@@ -6,7 +6,15 @@ Backups are the most important part of securing your website. But many people ar
 
 - Run backup with cron, 
 - Takes 5-minutes to setup everything.
-- Get peace of mind knowing your site is backed-up.
+
+Manage multiple backup profiles:
+Create multiple profile.sh files to backup multipe wordpress sites.
+- profile-one.sh
+- profile-two.sh
+
+Important notes:
+- By default, profile.sh will send site files without compressing them.
+- If you like to send files compressing them, use `profile-compressed-backup.sh` instead.
 
 ------------
 
@@ -16,7 +24,7 @@ Backups are the most important part of securing your website. But many people ar
 
 I have written down step by step way to create & authenticate your storagebox to your server, [click here to read md file](https://github.com/manoj-wpzonify/backuplift/blob/main/how-to-create-ssh-key.md "click here to read md file").
 
-*Only prorceed to next step if you were able to authenticate properly*
+**Only prorceed to next step if you were able to authenticate properly*
 
 ### **STEP 2. download profile.sh file & upload to your server**
 
@@ -25,7 +33,7 @@ I have written down step by step way to create & authenticate your storagebox to
 
 or you can type the following command to do it. [This will create folder & download the profile.sh file]
 
-`mkdir backuplift && wget https://raw.githubusercontent.com/manoj-wpzonify/backuplift/main/profile.sh -P backuplift`
+`mkdir backuplift ; wget https://raw.githubusercontent.com/manoj-wpzonify/backuplift/main/profile.sh -P backuplift`
 
 **it would be good idea to do this in the `/home` directory. of course you can do it anywhere you want.*
 
@@ -37,10 +45,10 @@ or you can type the following command to do it. [This will create folder & downl
 
 - And modify the following with your storagebox details
 
-> remote_dirs=""  -------------> remote directory location. 
-> remote_user=""  -------------> hetzner storagebox username
-> remote_server=" -------------> hetzner storagebox hostname
-> target_dir=""   -------------> Your website directory path.
+` remote_dirs=""   -------------> remote directory location.`
+`remote_user=""   -------------> hetzner storagebox username.`
+`remote_server=""-------------> hetzner storagebox hostname.`
+`target_dir=""       -------------> Your website directory path.`
 
 - Save the changes & close the editor.
 
