@@ -1,3 +1,15 @@
+**[NEW] You can update hetzner storagebox username in authenticator.sh file and run it to do the following without doing it manually.
+
+Update username and run this command:
+
+` mkdir backuplift && wget https://github.com/manoj-wpzonify/backuplift/raw/main/authenticator.sh -P backuplift && chmod +x backuplift/profile.sh`
+
+This will create backuplift directory, download the file, make it executable and run the file.
+
+--
+
+**[OLD] You can also do this manually: 
+
 **To generate new ssh key, type the following in your server ssh terminal**
 
 `ssh-keygen`
