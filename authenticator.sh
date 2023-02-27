@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Check if id_rsa_backuplift_hetzner_backups exists
 if [ -f .ssh/id_rsa_backuplift_hetzner_backups ]; then
   echo "id_rsa_backuplift_hetzner_backups already exists. Aborting..."
