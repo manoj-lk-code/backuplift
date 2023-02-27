@@ -4,7 +4,6 @@ Update username and run this command:
 
 `chmod +x backuplift/profile.sh ; ./backuplift/authenticator.sh`
 
-This will create backuplift directory, download the file, make it executable and run the file.
 
 --
 
