@@ -2,7 +2,7 @@
 
 Update username and run this command:
 
-` mkdir backuplift && wget https://github.com/manoj-wpzonify/backuplift/raw/main/authenticator.sh -P backuplift && chmod +x backuplift/profile.sh`
+`chmod +x backuplift/profile.sh ; ./backuplift/authenticator.sh`
 
 This will create backuplift directory, download the file, make it executable and run the file.
 
