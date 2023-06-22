@@ -14,8 +14,8 @@ target_dir=""
 date=$(date +"%d-%b-%Y")
 ssh_key_loc="/root/.ssh/id_rsa_backuplift_hetzner_backups"
 random_file_name=$(echo $RANDOM | md5sum | head -c 20; echo;)
-wpmysqluser=$(grep -w "DB_NAME" $target_dir/wp-config.php | cut --delimiter="'"  --fields="4")
-wpmysqldb=$(grep -w "DB_USER" $target_dir/wp-config.php | cut --delimiter="'"  --fields="4")
+wpmysqluser=$(grep -w "DB_USER" $target_dir/wp-config.php | cut --delimiter="'"  --fields="4")
+wpmysqldb=$(grep -w "DB_NAME" $target_dir/wp-config.php | cut --delimiter="'"  --fields="4")
 wpmysqluserpass=$(grep -w "DB_PASSWORD" $target_dir/wp-config.php | cut --delimiter="'"  --fields="4")
 
 # create backup folder if not exist
